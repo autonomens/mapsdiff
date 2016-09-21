@@ -1,0 +1,18 @@
+{
+  "name": "autonomaps",
+  "version": "0.0.1",
+  "description": "Maps by Autonomens",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "maps",
+    "autonomens"
+  ],
+  "author": "Autonomens",
+  "license": "MIT",
+  "devDependencies": {
+    "mapbox-gl": "^0.23.0"
+  }
+}

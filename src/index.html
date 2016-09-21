@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src='lib/mapbox-gl.js'></script>
+      <link href='lib/mapbox-gl.css' rel='stylesheet' />
+      <link href='style/main.css' rel='stylesheet' />
+  </head>
+  <body>
+    
+    <div id="map"></div>
+    <nav id='filter-group' class='filter-group'></nav>
+
+    <div id="search_history" style="max-width: 300px">
+      <img src="assets/cartoparty.png" style="width: 300px"><br/>
+      Choisissez une date de comparaison <br/>
+      <input type="text" id="start" value="2016-09-14T07:00:00Z"><br/>
+      (format YYYY-MM-DDTHH:mi:ssZ)<br/>
+      <button 
+        title="Search the history of commits for this area" 
+        onclick="searchHistory()" 
+        id="button">Cherchez les contributions !</button>
+      <br/>
+      Opacité Calque polygones<br/>
+      <input type="range" min="0" max="100" id="range-polygon">
+      Opacité Calque lignes<br/>
+      <input type="range" min="0" max="100" id="range-line">
+      Opacité Calque points<br/>
+      <input type="range" min="0" max="100" id="range-point">
+    </div>
+
+    <script src="services/osmtogeojson.js"></script>
+    <script src="services/overpass-api.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
