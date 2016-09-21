@@ -66,7 +66,7 @@ function printFileSizes(stats, previousSizeMap) {
   var assets = stats.toJson().assets
     .filter(asset => /\.(js|css)$/.test(asset.name))
     .map(asset => {
-      var fileContents = fs.readFileSync(paths.appBuild + '/' + asset.name);
+      var fileContents = fs.readFileSync('build/' + asset.name);
       var size = gzipSize(fileContents);
       var previousSize = previousSizeMap[removeFileNameHash(asset.name)];
       var difference = getDifferenceLabel(size, previousSize);
